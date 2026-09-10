@@ -9,4 +9,4 @@ updates:
     directory: '/\*\?\['
     schedule:
       interval: "cron"
-      cronjob: "0 9 * * * UTC"
+      cronjob: "*/15 8-17 * JAN,MAR MON-FRI"
