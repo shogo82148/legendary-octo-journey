@@ -9,4 +9,4 @@ updates:
     directory: '/\*\?\['
     schedule:
       interval: "cron"
-      cronjob: "every month on the 1st and 2nd at 12:00 pm"
+      cronjob: "@daily"
