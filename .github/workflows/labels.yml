@@ -1,0 +1,20 @@
+name: labels
+on:
+  push:
+    paths:
+      - .github/labels.json
+      - .github/workflows/labels.yml
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  label:
+    name: Manage GitHub labels
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Manage labels
+        uses: shogo82148/issue-label-manager-action@d86cf615f764ed1cd55f7391191bd7b0e2b19371
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
