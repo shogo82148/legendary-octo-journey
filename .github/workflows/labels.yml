@@ -12,13 +12,13 @@ jobs:
     name: Manage GitHub labels
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      issues: write
-      pull-requests: write
+      # contents: read
+      # issues: write
+      # pull-requests: write
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Manage labels
-        uses: shogo82148/issue-label-manager-action@d86cf615f764ed1cd55f7391191bd7b0e2b19371
+        uses: shogo82148/issue-label-manager-action@e8dbcd8198e86a1e98d5372e55db976fed9ba6f7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
